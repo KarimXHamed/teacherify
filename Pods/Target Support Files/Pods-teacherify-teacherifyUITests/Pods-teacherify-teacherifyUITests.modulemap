@@ -1,0 +1,6 @@
+framework module Pods_teacherify_teacherifyUITests {
+  umbrella header "Pods-teacherify-teacherifyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

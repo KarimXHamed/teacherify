@@ -1,0 +1,6 @@
+framework module Pods_teacherify {
+  umbrella header "Pods-teacherify-umbrella.h"
+
+  export *
+  module * { export * }
+}

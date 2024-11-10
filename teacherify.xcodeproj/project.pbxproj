@@ -1,0 +1,842 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4067099581D9C500B93164A5 /* Pods_teacherify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305979D0B5E5ACD09EA213CA /* Pods_teacherify.framework */; };
+		805D97C52CC54AB200CC8CE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D97C42CC54AB200CC8CE2 /* AppDelegate.swift */; };
+		805D97C72CC54AB200CC8CE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D97C62CC54AB200CC8CE2 /* SceneDelegate.swift */; };
+		805D97C92CC54AB200CC8CE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D97C82CC54AB200CC8CE2 /* ViewController.swift */; };
+		805D97CC2CC54AB300CC8CE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 805D97CA2CC54AB300CC8CE2 /* Main.storyboard */; };
+		805D97CE2CC54AD400CC8CE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 805D97CD2CC54AD400CC8CE2 /* Assets.xcassets */; };
+		805D97D12CC54AD400CC8CE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 805D97CF2CC54AD400CC8CE2 /* LaunchScreen.storyboard */; };
+		805D97DC2CC54AD500CC8CE2 /* teacherifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D97DB2CC54AD500CC8CE2 /* teacherifyTests.swift */; };
+		805D97E62CC54AD500CC8CE2 /* teacherifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D97E52CC54AD500CC8CE2 /* teacherifyUITests.swift */; };
+		805D97E82CC54AD500CC8CE2 /* teacherifyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D97E72CC54AD500CC8CE2 /* teacherifyUITestsLaunchTests.swift */; };
+		805D97FB2CC690D200CC8CE2 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D97FA2CC690D200CC8CE2 /* LanguageModel.swift */; };
+		805D97FD2CC6913C00CC8CE2 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D97FC2CC6913C00CC8CE2 /* LanguageCell.swift */; };
+		805D97FF2CC6959700CC8CE2 /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D97FE2CC6959700CC8CE2 /* LevelsViewController.swift */; };
+		805D98012CC6990B00CC8CE2 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D98002CC6990B00CC8CE2 /* ContentViewController.swift */; };
+		805D98032CC6A2F100CC8CE2 /* LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D98022CC6A2F100CC8CE2 /* LessonsViewController.swift */; };
+		805D98052CC6B8A500CC8CE2 /* Flashcard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805D98042CC6B8A400CC8CE2 /* Flashcard.xib */; };
+		805D98072CC6B91700CC8CE2 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D98062CC6B91700CC8CE2 /* FlashcardView.swift */; };
+		805D98092CC6BB2300CC8CE2 /* MyContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D98082CC6BB2300CC8CE2 /* MyContentViewController.swift */; };
+		805D980B2CC6CA3400CC8CE2 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D980A2CC6CA3300CC8CE2 /* LessonView.swift */; };
+		805D980D2CC6CACE00CC8CE2 /* Lesson.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805D980C2CC6CACE00CC8CE2 /* Lesson.xib */; };
+		80B0BA612CDB8A4000301E2F /* FetchLanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0BA602CDB8A3E00301E2F /* FetchLanguageModel.swift */; };
+		80B0BA632CDBC76E00301E2F /* ViewTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0BA622CDBC76C00301E2F /* ViewTracker.swift */; };
+		80EA42C42CCA6B9200F52789 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80EA42C32CCA6B9200F52789 /* GoogleService-Info.plist */; };
+		89389C631AB6827D65D19E8C /* Pods_teacherify_teacherifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A0175B75DA8CC72443ACE6 /* Pods_teacherify_teacherifyUITests.framework */; };
+		A72885BEF25D36A888F2F76D /* Pods_teacherifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FDA36A7E39CCA6E5B771A8 /* Pods_teacherifyTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		805D97D82CC54AD500CC8CE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 805D97B92CC54AB200CC8CE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 805D97C02CC54AB200CC8CE2;
+			remoteInfo = teacherify;
+		};
+		805D97E22CC54AD500CC8CE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 805D97B92CC54AB200CC8CE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 805D97C02CC54AB200CC8CE2;
+			remoteInfo = teacherify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0544975A1243FA253434764B /* Pods-teacherifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teacherifyTests.release.xcconfig"; path = "Target Support Files/Pods-teacherifyTests/Pods-teacherifyTests.release.xcconfig"; sourceTree = "<group>"; };
+		21E00C9F439159F4D8D7AF26 /* Pods-teacherify-teacherifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teacherify-teacherifyUITests.release.xcconfig"; path = "Target Support Files/Pods-teacherify-teacherifyUITests/Pods-teacherify-teacherifyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2D8016AAC23CDC2EA361A36D /* Pods-teacherifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teacherifyTests.debug.xcconfig"; path = "Target Support Files/Pods-teacherifyTests/Pods-teacherifyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		305979D0B5E5ACD09EA213CA /* Pods_teacherify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teacherify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		312B8BBA594A22368C85CFF1 /* Pods-teacherify-teacherifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teacherify-teacherifyUITests.debug.xcconfig"; path = "Target Support Files/Pods-teacherify-teacherifyUITests/Pods-teacherify-teacherifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		335D0BF89D217EEC4C3365C9 /* Pods-teacherify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teacherify.debug.xcconfig"; path = "Target Support Files/Pods-teacherify/Pods-teacherify.debug.xcconfig"; sourceTree = "<group>"; };
+		805D97C12CC54AB200CC8CE2 /* teacherify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teacherify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		805D97C42CC54AB200CC8CE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		805D97C62CC54AB200CC8CE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		805D97C82CC54AB200CC8CE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		805D97CB2CC54AB300CC8CE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		805D97CD2CC54AD400CC8CE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		805D97D02CC54AD400CC8CE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		805D97D22CC54AD400CC8CE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		805D97D72CC54AD500CC8CE2 /* teacherifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teacherifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		805D97DB2CC54AD500CC8CE2 /* teacherifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teacherifyTests.swift; sourceTree = "<group>"; };
+		805D97E12CC54AD500CC8CE2 /* teacherifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teacherifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		805D97E52CC54AD500CC8CE2 /* teacherifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teacherifyUITests.swift; sourceTree = "<group>"; };
+		805D97E72CC54AD500CC8CE2 /* teacherifyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teacherifyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		805D97FA2CC690D200CC8CE2 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
+		805D97FC2CC6913C00CC8CE2 /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
+		805D97FE2CC6959700CC8CE2 /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
+		805D98002CC6990B00CC8CE2 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		805D98022CC6A2F100CC8CE2 /* LessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewController.swift; sourceTree = "<group>"; };
+		805D98042CC6B8A400CC8CE2 /* Flashcard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Flashcard.xib; sourceTree = "<group>"; };
+		805D98062CC6B91700CC8CE2 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
+		805D98082CC6BB2300CC8CE2 /* MyContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContentViewController.swift; sourceTree = "<group>"; };
+		805D980A2CC6CA3300CC8CE2 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
+		805D980C2CC6CACE00CC8CE2 /* Lesson.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Lesson.xib; sourceTree = "<group>"; };
+		80B0BA602CDB8A3E00301E2F /* FetchLanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLanguageModel.swift; sourceTree = "<group>"; };
+		80B0BA622CDBC76C00301E2F /* ViewTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTracker.swift; sourceTree = "<group>"; };
+		80EA42C32CCA6B9200F52789 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A3A0175B75DA8CC72443ACE6 /* Pods_teacherify_teacherifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teacherify_teacherifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5FDA36A7E39CCA6E5B771A8 /* Pods_teacherifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teacherifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E465BAE1213972546E6C7FD6 /* Pods-teacherify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teacherify.release.xcconfig"; path = "Target Support Files/Pods-teacherify/Pods-teacherify.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		805D97BE2CC54AB200CC8CE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4067099581D9C500B93164A5 /* Pods_teacherify.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		805D97D42CC54AD500CC8CE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A72885BEF25D36A888F2F76D /* Pods_teacherifyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		805D97DE2CC54AD500CC8CE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89389C631AB6827D65D19E8C /* Pods_teacherify_teacherifyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		568735A5ADDDD3576806F8A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				335D0BF89D217EEC4C3365C9 /* Pods-teacherify.debug.xcconfig */,
+				E465BAE1213972546E6C7FD6 /* Pods-teacherify.release.xcconfig */,
+				312B8BBA594A22368C85CFF1 /* Pods-teacherify-teacherifyUITests.debug.xcconfig */,
+				21E00C9F439159F4D8D7AF26 /* Pods-teacherify-teacherifyUITests.release.xcconfig */,
+				2D8016AAC23CDC2EA361A36D /* Pods-teacherifyTests.debug.xcconfig */,
+				0544975A1243FA253434764B /* Pods-teacherifyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		805D97B82CC54AB200CC8CE2 = {
+			isa = PBXGroup;
+			children = (
+				805D97C32CC54AB200CC8CE2 /* teacherify */,
+				805D97DA2CC54AD500CC8CE2 /* teacherifyTests */,
+				805D97E42CC54AD500CC8CE2 /* teacherifyUITests */,
+				805D97C22CC54AB200CC8CE2 /* Products */,
+				568735A5ADDDD3576806F8A9 /* Pods */,
+				ED71B45909073FB2009169EF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		805D97C22CC54AB200CC8CE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				805D97C12CC54AB200CC8CE2 /* teacherify.app */,
+				805D97D72CC54AD500CC8CE2 /* teacherifyTests.xctest */,
+				805D97E12CC54AD500CC8CE2 /* teacherifyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		805D97C32CC54AB200CC8CE2 /* teacherify */ = {
+			isa = PBXGroup;
+			children = (
+				80EA42C52CCAA33200F52789 /* Views */,
+				80EA42C62CCAA34700F52789 /* Models */,
+				80EA42C72CCAA35600F52789 /* ModelView */,
+				805D97C42CC54AB200CC8CE2 /* AppDelegate.swift */,
+				805D97C62CC54AB200CC8CE2 /* SceneDelegate.swift */,
+				805D97CA2CC54AB300CC8CE2 /* Main.storyboard */,
+				805D97CD2CC54AD400CC8CE2 /* Assets.xcassets */,
+				805D97CF2CC54AD400CC8CE2 /* LaunchScreen.storyboard */,
+				80EA42C32CCA6B9200F52789 /* GoogleService-Info.plist */,
+				805D97D22CC54AD400CC8CE2 /* Info.plist */,
+				805D97FC2CC6913C00CC8CE2 /* LanguageCell.swift */,
+			);
+			path = teacherify;
+			sourceTree = "<group>";
+		};
+		805D97DA2CC54AD500CC8CE2 /* teacherifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				805D97DB2CC54AD500CC8CE2 /* teacherifyTests.swift */,
+			);
+			path = teacherifyTests;
+			sourceTree = "<group>";
+		};
+		805D97E42CC54AD500CC8CE2 /* teacherifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				805D97E52CC54AD500CC8CE2 /* teacherifyUITests.swift */,
+				805D97E72CC54AD500CC8CE2 /* teacherifyUITestsLaunchTests.swift */,
+			);
+			path = teacherifyUITests;
+			sourceTree = "<group>";
+		};
+		80EA42C52CCAA33200F52789 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				805D97C82CC54AB200CC8CE2 /* ViewController.swift */,
+				805D97FE2CC6959700CC8CE2 /* LevelsViewController.swift */,
+				805D98002CC6990B00CC8CE2 /* ContentViewController.swift */,
+				805D98022CC6A2F100CC8CE2 /* LessonsViewController.swift */,
+				805D98082CC6BB2300CC8CE2 /* MyContentViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		80EA42C62CCAA34700F52789 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				805D97FA2CC690D200CC8CE2 /* LanguageModel.swift */,
+				805D980A2CC6CA3300CC8CE2 /* LessonView.swift */,
+				805D98062CC6B91700CC8CE2 /* FlashcardView.swift */,
+				805D98042CC6B8A400CC8CE2 /* Flashcard.xib */,
+				805D980C2CC6CACE00CC8CE2 /* Lesson.xib */,
+				80B0BA622CDBC76C00301E2F /* ViewTracker.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		80EA42C72CCAA35600F52789 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				80B0BA602CDB8A3E00301E2F /* FetchLanguageModel.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		ED71B45909073FB2009169EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				305979D0B5E5ACD09EA213CA /* Pods_teacherify.framework */,
+				A3A0175B75DA8CC72443ACE6 /* Pods_teacherify_teacherifyUITests.framework */,
+				A5FDA36A7E39CCA6E5B771A8 /* Pods_teacherifyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		805D97C02CC54AB200CC8CE2 /* teacherify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 805D97EB2CC54AD500CC8CE2 /* Build configuration list for PBXNativeTarget "teacherify" */;
+			buildPhases = (
+				FAEE672EA71C3650CC25CBBE /* [CP] Check Pods Manifest.lock */,
+				805D97BD2CC54AB200CC8CE2 /* Sources */,
+				805D97BE2CC54AB200CC8CE2 /* Frameworks */,
+				805D97BF2CC54AB200CC8CE2 /* Resources */,
+				D45648A1EAF1EE555392F24D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = teacherify;
+			productName = teacherify;
+			productReference = 805D97C12CC54AB200CC8CE2 /* teacherify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		805D97D62CC54AD500CC8CE2 /* teacherifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 805D97EE2CC54AD500CC8CE2 /* Build configuration list for PBXNativeTarget "teacherifyTests" */;
+			buildPhases = (
+				05D7EA6E0A8CC15F2F9AB526 /* [CP] Check Pods Manifest.lock */,
+				805D97D32CC54AD500CC8CE2 /* Sources */,
+				805D97D42CC54AD500CC8CE2 /* Frameworks */,
+				805D97D52CC54AD500CC8CE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				805D97D92CC54AD500CC8CE2 /* PBXTargetDependency */,
+			);
+			name = teacherifyTests;
+			productName = teacherifyTests;
+			productReference = 805D97D72CC54AD500CC8CE2 /* teacherifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		805D97E02CC54AD500CC8CE2 /* teacherifyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 805D97F12CC54AD500CC8CE2 /* Build configuration list for PBXNativeTarget "teacherifyUITests" */;
+			buildPhases = (
+				728B3C2011D4A510A05B38B7 /* [CP] Check Pods Manifest.lock */,
+				805D97DD2CC54AD500CC8CE2 /* Sources */,
+				805D97DE2CC54AD500CC8CE2 /* Frameworks */,
+				805D97DF2CC54AD500CC8CE2 /* Resources */,
+				C1714D169B2FDEEF2E0F7E2B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				805D97E32CC54AD500CC8CE2 /* PBXTargetDependency */,
+			);
+			name = teacherifyUITests;
+			productName = teacherifyUITests;
+			productReference = 805D97E12CC54AD500CC8CE2 /* teacherifyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		805D97B92CC54AB200CC8CE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					805D97C02CC54AB200CC8CE2 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					805D97D62CC54AD500CC8CE2 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 805D97C02CC54AB200CC8CE2;
+					};
+					805D97E02CC54AD500CC8CE2 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 805D97C02CC54AB200CC8CE2;
+					};
+				};
+			};
+			buildConfigurationList = 805D97BC2CC54AB200CC8CE2 /* Build configuration list for PBXProject "teacherify" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 805D97B82CC54AB200CC8CE2;
+			productRefGroup = 805D97C22CC54AB200CC8CE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				805D97C02CC54AB200CC8CE2 /* teacherify */,
+				805D97D62CC54AD500CC8CE2 /* teacherifyTests */,
+				805D97E02CC54AD500CC8CE2 /* teacherifyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		805D97BF2CC54AB200CC8CE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				805D97D12CC54AD400CC8CE2 /* LaunchScreen.storyboard in Resources */,
+				805D97CE2CC54AD400CC8CE2 /* Assets.xcassets in Resources */,
+				805D98052CC6B8A500CC8CE2 /* Flashcard.xib in Resources */,
+				805D97CC2CC54AB300CC8CE2 /* Main.storyboard in Resources */,
+				805D980D2CC6CACE00CC8CE2 /* Lesson.xib in Resources */,
+				80EA42C42CCA6B9200F52789 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		805D97D52CC54AD500CC8CE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		805D97DF2CC54AD500CC8CE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05D7EA6E0A8CC15F2F9AB526 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-teacherifyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		728B3C2011D4A510A05B38B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-teacherify-teacherifyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1714D169B2FDEEF2E0F7E2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-teacherify-teacherifyUITests/Pods-teacherify-teacherifyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-teacherify-teacherifyUITests/Pods-teacherify-teacherifyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-teacherify-teacherifyUITests/Pods-teacherify-teacherifyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D45648A1EAF1EE555392F24D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-teacherify/Pods-teacherify-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-teacherify/Pods-teacherify-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-teacherify/Pods-teacherify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAEE672EA71C3650CC25CBBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-teacherify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		805D97BD2CC54AB200CC8CE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				805D98092CC6BB2300CC8CE2 /* MyContentViewController.swift in Sources */,
+				805D97C92CC54AB200CC8CE2 /* ViewController.swift in Sources */,
+				805D97C52CC54AB200CC8CE2 /* AppDelegate.swift in Sources */,
+				805D980B2CC6CA3400CC8CE2 /* LessonView.swift in Sources */,
+				805D97C72CC54AB200CC8CE2 /* SceneDelegate.swift in Sources */,
+				805D97FF2CC6959700CC8CE2 /* LevelsViewController.swift in Sources */,
+				80B0BA612CDB8A4000301E2F /* FetchLanguageModel.swift in Sources */,
+				805D98032CC6A2F100CC8CE2 /* LessonsViewController.swift in Sources */,
+				80B0BA632CDBC76E00301E2F /* ViewTracker.swift in Sources */,
+				805D97FD2CC6913C00CC8CE2 /* LanguageCell.swift in Sources */,
+				805D97FB2CC690D200CC8CE2 /* LanguageModel.swift in Sources */,
+				805D98072CC6B91700CC8CE2 /* FlashcardView.swift in Sources */,
+				805D98012CC6990B00CC8CE2 /* ContentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		805D97D32CC54AD500CC8CE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				805D97DC2CC54AD500CC8CE2 /* teacherifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		805D97DD2CC54AD500CC8CE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				805D97E82CC54AD500CC8CE2 /* teacherifyUITestsLaunchTests.swift in Sources */,
+				805D97E62CC54AD500CC8CE2 /* teacherifyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		805D97D92CC54AD500CC8CE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 805D97C02CC54AB200CC8CE2 /* teacherify */;
+			targetProxy = 805D97D82CC54AD500CC8CE2 /* PBXContainerItemProxy */;
+		};
+		805D97E32CC54AD500CC8CE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 805D97C02CC54AB200CC8CE2 /* teacherify */;
+			targetProxy = 805D97E22CC54AD500CC8CE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		805D97CA2CC54AB300CC8CE2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				805D97CB2CC54AB300CC8CE2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		805D97CF2CC54AD400CC8CE2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				805D97D02CC54AD400CC8CE2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		805D97E92CC54AD500CC8CE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		805D97EA2CC54AD500CC8CE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		805D97EC2CC54AD500CC8CE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 335D0BF89D217EEC4C3365C9 /* Pods-teacherify.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y44M997BUN;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = teacherify/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karim.teacherify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		805D97ED2CC54AD500CC8CE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E465BAE1213972546E6C7FD6 /* Pods-teacherify.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y44M997BUN;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = teacherify/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karim.teacherify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		805D97EF2CC54AD500CC8CE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D8016AAC23CDC2EA361A36D /* Pods-teacherifyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y44M997BUN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karim.teacherifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/teacherify.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/teacherify";
+			};
+			name = Debug;
+		};
+		805D97F02CC54AD500CC8CE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0544975A1243FA253434764B /* Pods-teacherifyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y44M997BUN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karim.teacherifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/teacherify.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/teacherify";
+			};
+			name = Release;
+		};
+		805D97F22CC54AD500CC8CE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 312B8BBA594A22368C85CFF1 /* Pods-teacherify-teacherifyUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y44M997BUN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karim.teacherifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = teacherify;
+			};
+			name = Debug;
+		};
+		805D97F32CC54AD500CC8CE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21E00C9F439159F4D8D7AF26 /* Pods-teacherify-teacherifyUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y44M997BUN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karim.teacherifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = teacherify;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		805D97BC2CC54AB200CC8CE2 /* Build configuration list for PBXProject "teacherify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				805D97E92CC54AD500CC8CE2 /* Debug */,
+				805D97EA2CC54AD500CC8CE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		805D97EB2CC54AD500CC8CE2 /* Build configuration list for PBXNativeTarget "teacherify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				805D97EC2CC54AD500CC8CE2 /* Debug */,
+				805D97ED2CC54AD500CC8CE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		805D97EE2CC54AD500CC8CE2 /* Build configuration list for PBXNativeTarget "teacherifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				805D97EF2CC54AD500CC8CE2 /* Debug */,
+				805D97F02CC54AD500CC8CE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		805D97F12CC54AD500CC8CE2 /* Build configuration list for PBXNativeTarget "teacherifyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				805D97F22CC54AD500CC8CE2 /* Debug */,
+				805D97F32CC54AD500CC8CE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 805D97B92CC54AB200CC8CE2 /* Project object */;
+}
