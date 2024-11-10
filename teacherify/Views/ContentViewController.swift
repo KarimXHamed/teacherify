@@ -32,7 +32,15 @@ class ContentViewController: UICollectionViewController {
         achievementsView.isHidden = true
         
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        setupAchievementsButtonGradient()
+    }
     private func setupAchievementsButtonGradient() {
+        guard Achievments != nil else {
+            print("Achievments button is nil")
+            return
+        }
             let gradientLayer = CAGradientLayer()
             gradientLayer.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
             gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
@@ -58,10 +66,11 @@ class ContentViewController: UICollectionViewController {
         achievementsView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         
         UIView.animate(withDuration: 0.4) {
-            self.visualEffect.effect = self.effect
-            self.achievementsView.alpha = 1
-            self.achievementsView.transform = CGAffineTransform.identity
-        }
+     
+                self.visualEffect.effect = self.effect
+                self.achievementsView.alpha = 1
+                self.achievementsView.transform = CGAffineTransform.identity
+            }
     }
 
     func animateOut() {
@@ -76,6 +85,10 @@ class ContentViewController: UICollectionViewController {
     }
 
     @IBAction func achievmentsClicked(_ sender: Any) {
+        guard currentLevel != nil else {
+            print("currentLevel is nil")
+            return
+        }
         animateIn()
     }
     @IBAction func doneClicked(_ sender: Any) {
@@ -91,20 +104,13 @@ class ContentViewController: UICollectionViewController {
         }
         cell.languageLabel.text = currentContent[indexPath.item]
         cell.layer.cornerRadius=10
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
-        gradientLayer.frame = cell.bounds // Set the frame to the bounds of the button
-        gradientLayer.cornerRadius = cell.layer.cornerRadius // Optional: match the button's corner radius
-
-        // Clear existing layers before adding the gradient
-        cell.layer.sublayers?.forEach { $0.removeFromSuperlayer() }
-        cell.layer.insertSublayer(gradientLayer, at: 0)
         return cell
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let level = currentLevel else { return }
+        guard let level = currentLevel else {
+            print("currentLevel is nil")
+            return
+        }
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "LessonsViewController") as! LessonsViewController
         switch currentContent[indexPath.item] {
             case "Vocab":

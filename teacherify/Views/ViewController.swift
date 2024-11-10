@@ -38,16 +38,7 @@ class ViewController: UICollectionViewController {
         }
         cell.languageLabel.text=languages[indexPath.item].name
         cell.layer.cornerRadius=10
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
-        gradientLayer.frame = cell.bounds // Set the frame to the bounds of the button
-        gradientLayer.cornerRadius = cell.layer.cornerRadius // Optional: match the button's corner radius
 
-        // Clear existing layers before adding the gradient
-        cell.layer.sublayers?.forEach { $0.removeFromSuperlayer() }
-        cell.layer.insertSublayer(gradientLayer, at: 0)
         return cell
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
