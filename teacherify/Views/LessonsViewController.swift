@@ -16,6 +16,10 @@ class LessonsViewController: UITableViewController {
         super.viewDidLoad()
         tableView.layer.cornerRadius = 20
         tableView.layer.masksToBounds = true
+        
+ 
+    }
+    func setupBackground(){
         guard let collectionView = self.tableView else { return }
         
         // Create and set the background image
@@ -25,7 +29,6 @@ class LessonsViewController: UITableViewController {
         
         // Set the background view
         collectionView.backgroundView = backgroundImage
- 
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
            // #warning Incomplete implementation, return the number of rows

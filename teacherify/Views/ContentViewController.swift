@@ -20,8 +20,6 @@ class ContentViewController: UICollectionViewController,UICollectionViewDelegate
         
         
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        let navigationBarAppearance = UINavigationBar.appearance()
-        navigationBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         self.title=currentLevel?.name
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -40,11 +38,8 @@ class ContentViewController: UICollectionViewController,UICollectionViewDelegate
             backgroundImage.contentMode = .scaleAspectFill
 
             self.collectionView.backgroundView = backgroundImage
-
-           
-        
-        
-    }
+}
+    
     func achievmentsIsClicked() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         

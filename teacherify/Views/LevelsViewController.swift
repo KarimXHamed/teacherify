@@ -17,7 +17,11 @@ class LevelsViewController: UICollectionViewController {
 
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         self.title = currentLanguage?.name
-     
+     setupBackground()
+        
+       
+    }
+    func setupBackground(){
         // Ensure that self.collectionView is not nil
         guard let collectionView = self.collectionView else { return }
         
@@ -28,7 +32,6 @@ class LevelsViewController: UICollectionViewController {
         
         // Set the background view
         collectionView.backgroundView = backgroundImage
-       
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -40,7 +43,6 @@ class LevelsViewController: UICollectionViewController {
         }
         cell.languageLabel.text = currentLanguage?.levels[indexPath.row].name
         cell.layer.cornerRadius=10
-
         return cell
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

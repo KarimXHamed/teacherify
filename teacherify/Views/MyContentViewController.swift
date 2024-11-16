@@ -18,36 +18,28 @@ class MyContentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-print(position2!)
-        let backgroundImage = UIImageView(frame: self.view.bounds)
-             backgroundImage.image = UIImage(named: "photo_5881715519122428151_y.jpg") // Replace with your image name
-             backgroundImage.contentMode = .scaleAspectFill // Adjust the content mode as needed
-             
-             // Add the UIImageView to the view hierarchy
-             self.view.addSubview(backgroundImage)
-             
-             // Send the image view to the back
-             self.view.sendSubviewToBack(backgroundImage)
-           
-    
-        flashcards=currentLesson?.quizes
         lesson=currentLesson!.text
-        print("\(lesson!)")
+        setupScrollAndStackView()
+        setUpUI()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        }
+    func setupScrollAndStackView(){
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(scrollView)
-        
         scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 25).isActive = true
         scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
-        
+        scrollView.addSubview(stackView)
+        scrollView.contentLayoutGuide.topAnchor.constraint(equalTo: stackView.topAnchor).isActive = true
+        scrollView.contentLayoutGuide.leadingAnchor.constraint(equalTo: stackView.leadingAnchor).isActive = true
+        scrollView.contentLayoutGuide.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
+        scrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: stackView.bottomAnchor).isActive = true
         
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
         stackView.spacing = 50
-        scrollView.addSubview(stackView)
-        
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
         stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
@@ -55,18 +47,17 @@ print(position2!)
         stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
         stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
         
-        scrollView.contentLayoutGuide.topAnchor.constraint(equalTo: stackView.topAnchor).isActive = true
-        scrollView.contentLayoutGuide.leadingAnchor.constraint(equalTo: stackView.leadingAnchor).isActive = true
-        scrollView.contentLayoutGuide.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
-        scrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: stackView.bottomAnchor).isActive = true
-        setUpUI()
-        
-        
-      
-        
         
     }
     func setUpUI(){
+        //setup Background
+        let backgroundImage = UIImageView(frame: self.view.bounds)
+             backgroundImage.image = UIImage(named: "photo_5881715519122428151_y.jpg")
+             backgroundImage.contentMode = .scaleAspectFill
+             self.view.addSubview(backgroundImage)
+             self.view.sendSubviewToBack(backgroundImage)
+        
+        flashcards=currentLesson?.quizes
        let myLesson=LessonView()
         myLesson.delegate=self
         myLesson.frontText="tap to see your lesson"
@@ -100,34 +91,12 @@ print(position2!)
             i+=1
             
         }
-    
+       
+        
     }
-//    func updateUI(newFlashCard:Quiz){
-//        let quiz = FlashCard()
-//        quiz.delegate=self
-//        quiz.textLabel.text=newFlashCard.question.text
-//        quiz.frontText = newFlashCard.question.text
-//        quiz.backText = newFlashCard.correctAnswer
-//        quiz.correctAnswer = newFlashCard.correctAnswer
-//        quiz.translatesAutoresizingMaskIntoConstraints = false
-//        stackView.addArrangedSubview(quiz)
-//        
-//        quiz.widthAnchor.constraint(equalToConstant: 250).isActive = true
-//        quiz.heightAnchor.constraint(equalToConstant: 250).isActive = true
-//        quiz.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70).isActive = true
-//        quiz.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70).isActive = true
-//
-//    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func dismissKeyboard() {
+        view.endEditing(true) // Dismiss the keyboard
     }
-    */
 
 }
