@@ -10,9 +10,14 @@ import UIKit
 class LanguageCell: UICollectionViewCell {
     @IBOutlet weak var languageLabel: UILabel!
     private var gradientLayer: CAGradientLayer?
-
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Configure the label
+        languageLabel.numberOfLines = 0 // Allow multiple lines
+        languageLabel.lineBreakMode = .byWordWrapping // Wrap text
+    }
       override func layoutSubviews() {
-          super.layoutSubviews()
+          super.layoutSubviews()	
           setupGradientLayer()
       }
 
@@ -22,7 +27,7 @@ class LanguageCell: UICollectionViewCell {
 
           // Create a new gradient layer
           gradientLayer = CAGradientLayer()
-          gradientLayer?.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
+          gradientLayer?.colors = [UIColor.systemPink.cgColor, UIColor.systemOrange.cgColor]
           gradientLayer?.startPoint = CGPoint(x: 0, y: 0.5)
           gradientLayer?.endPoint = CGPoint(x: 1, y: 0.5)
           gradientLayer?.frame = bounds // Use bounds here

@@ -17,6 +17,17 @@ class LevelsViewController: UICollectionViewController {
 
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         self.title = currentLanguage?.name
+     
+        // Ensure that self.collectionView is not nil
+        guard let collectionView = self.collectionView else { return }
+        
+        // Create and set the background image
+        let backgroundImage = UIImageView(frame: collectionView.bounds)
+        backgroundImage.image = UIImage(named: "photo_5881715519122428151_y.jpg")
+        backgroundImage.contentMode = .scaleAspectFill
+        
+        // Set the background view
+        collectionView.backgroundView = backgroundImage
        
     }
 

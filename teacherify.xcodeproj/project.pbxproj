@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4067099581D9C500B93164A5 /* Pods_teacherify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305979D0B5E5ACD09EA213CA /* Pods_teacherify.framework */; };
+		8004E3252CE8A63E00CBB40D /* AchievmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8004E3242CE8A63E00CBB40D /* AchievmentsViewController.swift */; };
 		805D97C52CC54AB200CC8CE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D97C42CC54AB200CC8CE2 /* AppDelegate.swift */; };
 		805D97C72CC54AB200CC8CE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D97C62CC54AB200CC8CE2 /* SceneDelegate.swift */; };
 		805D97C92CC54AB200CC8CE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D97C82CC54AB200CC8CE2 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 		805D98092CC6BB2300CC8CE2 /* MyContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D98082CC6BB2300CC8CE2 /* MyContentViewController.swift */; };
 		805D980B2CC6CA3400CC8CE2 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805D980A2CC6CA3300CC8CE2 /* LessonView.swift */; };
 		805D980D2CC6CACE00CC8CE2 /* Lesson.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805D980C2CC6CACE00CC8CE2 /* Lesson.xib */; };
+		807E64BF2CE2B99200EEFA6F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807E64BE2CE2B99000EEFA6F /* GradientView.swift */; };
 		80B0BA612CDB8A4000301E2F /* FetchLanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0BA602CDB8A3E00301E2F /* FetchLanguageModel.swift */; };
 		80B0BA632CDBC76E00301E2F /* ViewTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0BA622CDBC76C00301E2F /* ViewTracker.swift */; };
 		80EA42C42CCA6B9200F52789 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80EA42C32CCA6B9200F52789 /* GoogleService-Info.plist */; };
@@ -58,6 +60,7 @@
 		305979D0B5E5ACD09EA213CA /* Pods_teacherify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teacherify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		312B8BBA594A22368C85CFF1 /* Pods-teacherify-teacherifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teacherify-teacherifyUITests.debug.xcconfig"; path = "Target Support Files/Pods-teacherify-teacherifyUITests/Pods-teacherify-teacherifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		335D0BF89D217EEC4C3365C9 /* Pods-teacherify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teacherify.debug.xcconfig"; path = "Target Support Files/Pods-teacherify/Pods-teacherify.debug.xcconfig"; sourceTree = "<group>"; };
+		8004E3242CE8A63E00CBB40D /* AchievmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievmentsViewController.swift; sourceTree = "<group>"; };
 		805D97C12CC54AB200CC8CE2 /* teacherify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teacherify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		805D97C42CC54AB200CC8CE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		805D97C62CC54AB200CC8CE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		805D98082CC6BB2300CC8CE2 /* MyContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContentViewController.swift; sourceTree = "<group>"; };
 		805D980A2CC6CA3300CC8CE2 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
 		805D980C2CC6CACE00CC8CE2 /* Lesson.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Lesson.xib; sourceTree = "<group>"; };
+		807E64BE2CE2B99000EEFA6F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		80B0BA602CDB8A3E00301E2F /* FetchLanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLanguageModel.swift; sourceTree = "<group>"; };
 		80B0BA622CDBC76C00301E2F /* ViewTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTracker.swift; sourceTree = "<group>"; };
 		80EA42C32CCA6B9200F52789 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 				805D98002CC6990B00CC8CE2 /* ContentViewController.swift */,
 				805D98022CC6A2F100CC8CE2 /* LessonsViewController.swift */,
 				805D98082CC6BB2300CC8CE2 /* MyContentViewController.swift */,
+				8004E3242CE8A63E00CBB40D /* AchievmentsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				805D98042CC6B8A400CC8CE2 /* Flashcard.xib */,
 				805D980C2CC6CACE00CC8CE2 /* Lesson.xib */,
 				80B0BA622CDBC76C00301E2F /* ViewTracker.swift */,
+				807E64BE2CE2B99000EEFA6F /* GradientView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -476,6 +482,7 @@
 				805D97C92CC54AB200CC8CE2 /* ViewController.swift in Sources */,
 				805D97C52CC54AB200CC8CE2 /* AppDelegate.swift in Sources */,
 				805D980B2CC6CA3400CC8CE2 /* LessonView.swift in Sources */,
+				807E64BF2CE2B99200EEFA6F /* GradientView.swift in Sources */,
 				805D97C72CC54AB200CC8CE2 /* SceneDelegate.swift in Sources */,
 				805D97FF2CC6959700CC8CE2 /* LevelsViewController.swift in Sources */,
 				80B0BA612CDB8A4000301E2F /* FetchLanguageModel.swift in Sources */,
@@ -485,6 +492,7 @@
 				805D97FB2CC690D200CC8CE2 /* LanguageModel.swift in Sources */,
 				805D98072CC6B91700CC8CE2 /* FlashcardView.swift in Sources */,
 				805D98012CC6990B00CC8CE2 /* ContentViewController.swift in Sources */,
+				8004E3252CE8A63E00CBB40D /* AchievmentsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

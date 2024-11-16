@@ -18,17 +18,22 @@
             <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fW-WV-xso">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tap to see the lesson" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fW-WV-xso">
                     <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5fW-WV-xso" secondAttribute="bottom" id="DGl-yO-cev"/>
+                <constraint firstItem="5fW-WV-xso" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FPU-vS-2cd"/>
+                <constraint firstItem="5fW-WV-xso" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SZr-E0-KnG"/>
+                <constraint firstItem="5fW-WV-xso" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="j2U-iJ-rwV"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="29.007633587786259" y="-11.267605633802818"/>
         </view>

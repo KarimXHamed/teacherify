@@ -10,8 +10,8 @@ import UIKit
 class LessonView: UIView {
     @IBOutlet weak var lessonText: UILabel!
             var isFlipped=false
-            var frontText="Click to view the lesson"
-            var backText="???"
+            var frontText="tap to see lesson"
+            var backText="tap to see lesson"
         var correctAnswer:String?
     var lessonID:String?
             weak var delegate:MyContentViewController!
@@ -69,9 +69,7 @@ class LessonView: UIView {
 
     @objc func handleTap() {
         if !isFlipped{
-            UIView.transition(with: self, duration: 0.5, options: .transitionCurlUp){
-                self.lessonText.backgroundColor = .gray
-                self.lessonText.text=self.backText
+            UIView.transition(with: self, duration: 0.5, options: .transitionCurlUp){                self.lessonText.text=self.backText
                 self.isFlipped=true
                 
             }}

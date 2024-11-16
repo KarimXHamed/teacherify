@@ -19,7 +19,17 @@ class MyContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 print(position2!)
-        self.title=currentLesson?.name
+        let backgroundImage = UIImageView(frame: self.view.bounds)
+             backgroundImage.image = UIImage(named: "photo_5881715519122428151_y.jpg") // Replace with your image name
+             backgroundImage.contentMode = .scaleAspectFill // Adjust the content mode as needed
+             
+             // Add the UIImageView to the view hierarchy
+             self.view.addSubview(backgroundImage)
+             
+             // Send the image view to the back
+             self.view.sendSubviewToBack(backgroundImage)
+           
+    
         flashcards=currentLesson?.quizes
         lesson=currentLesson!.text
         print("\(lesson!)")
@@ -59,9 +69,9 @@ print(position2!)
     func setUpUI(){
        let myLesson=LessonView()
         myLesson.delegate=self
-        myLesson.frontText="???"
+        myLesson.frontText="tap to see your lesson"
         myLesson.backText=lesson!
-        myLesson.lessonText.text="???"
+        myLesson.lessonText.text="tap to see your lesson"
         myLesson.lessonID="\(position2!) lesson"
         myLesson.currentLevel3=currentLevel2
         myLesson.translatesAutoresizingMaskIntoConstraints = false
