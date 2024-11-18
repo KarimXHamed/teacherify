@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FlashcardView: UIView {
+class FlashcardView: UIView, UITextFieldDelegate {
 
         var isFlipped=false
         var frontText="???"
@@ -62,7 +62,7 @@ class FlashcardView: UIView {
                             contentView.layer.cornerRadius = 25
                             contentView.layer.masksToBounds = true
                             submitButton.addTarget(self, action: #selector(submitIsTapped), for: .touchUpInside)
-                                
+                            self.FlashCardTextField.delegate=self
                             return
                         }
                     }

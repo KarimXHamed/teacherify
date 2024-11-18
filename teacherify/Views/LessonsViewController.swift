@@ -14,9 +14,10 @@ class LessonsViewController: UITableViewController {
     var currentLevel1:String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title=selectedContent
         tableView.layer.cornerRadius = 20
         tableView.layer.masksToBounds = true
-        
+        setupBackground()
  
     }
     func setupBackground(){
@@ -50,6 +51,7 @@ class LessonsViewController: UITableViewController {
            return cell
        }
        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           tableView.deselectRow(at: indexPath, animated: true)
            let lesson = selectedLessons[indexPath.row]
            let vc = self.storyboard?.instantiateViewController(withIdentifier: "MyContentViewController") as! MyContentViewController
            vc.currentLesson=lesson

@@ -16,13 +16,14 @@ class ViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        setupActivityIndicator()
+        setupBackground()
+        
 
-        
-        
-        
         activityIndicator.startAnimating()
+      
         viewModel.fetchLanguageModel { [weak self] in
-            
+           
             DispatchQueue.main.async {
                 self?.activityIndicator.stopAnimating()
                 self?.activityIndicator.isHidden = true
@@ -44,12 +45,19 @@ class ViewController: UICollectionViewController {
             }
         }
     }
+    func setupActivityIndicator() {
+        self.view.bringSubviewToFront(activityIndicator)
+        activityIndicator.center = self.view.center
+        activityIndicator.color = .white  // Set the color of the indicator
+        activityIndicator.hidesWhenStopped = true
+        self.view.addSubview(activityIndicator)  // Add activity indicator before the background image
+    }
 
         func setupBackground(){
            
                 let backgroundImage = UIImageView(frame: self.collectionView.bounds)
                 backgroundImage.image = UIImage(named: "photo_5881715519122428151_y.jpg")
-                backgroundImage.contentMode = .scaleAspectFill
+                backgroundImage.contentMode = .scaleToFill // scaleAspectFill
 
                 self.collectionView.backgroundView = backgroundImage
 

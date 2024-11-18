@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
+
 class FetchLanguageModel: NSObject {
     func fetchLanguageModel(completion: @escaping () -> Void) {
         let db = Firestore.firestore()

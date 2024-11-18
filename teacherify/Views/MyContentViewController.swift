@@ -18,12 +18,24 @@ class MyContentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title=currentLesson?.name
         lesson=currentLesson!.text
         setupScrollAndStackView()
         setUpUI()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
+       setupGestureRecognizers()
+        setupKeyboardNotifications()
         }
+
+    private func setupGestureRecognizers() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
+    }
+
+    private func setupKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
     func setupScrollAndStackView(){
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(scrollView)
@@ -50,13 +62,17 @@ class MyContentViewController: UIViewController {
         
     }
     func setUpUI(){
-        //setup Background
-        let backgroundImage = UIImageView(frame: self.view.bounds)
-             backgroundImage.image = UIImage(named: "photo_5881715519122428151_y.jpg")
-             backgroundImage.contentMode = .scaleAspectFill
-             self.view.addSubview(backgroundImage)
-             self.view.sendSubviewToBack(backgroundImage)
-        
+       DispatchQueue.global(qos: .background).async {
+        if let backgroundImage = UIImage(named: "photo_5881715519122428151_y.jpg") {
+            DispatchQueue.main.async {
+                let backgroundImageView = UIImageView(frame: self.view.bounds)
+                backgroundImageView.image = backgroundImage
+                backgroundImageView.contentMode = .scaleToFill
+                self.view.addSubview(backgroundImageView)
+                self.view.sendSubviewToBack(backgroundImageView)
+            }
+        }
+    }
         flashcards=currentLesson?.quizes
        let myLesson=LessonView()
         myLesson.delegate=self
@@ -69,8 +85,12 @@ class MyContentViewController: UIViewController {
         stackView.addArrangedSubview(myLesson)
         myLesson.widthAnchor.constraint(equalToConstant: 250).isActive = true
         myLesson.heightAnchor.constraint(equalToConstant: 300).isActive = true
-        myLesson.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70).isActive = true
-        myLesson.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70).isActive = true
+        if let parentView = view {
+            let parentWidth = parentView.bounds.width
+            let spacing = (parentWidth - 250) / 2
+            
+            myLesson.leadingAnchor.constraint(equalTo: parentView.leadingAnchor, constant: spacing).isActive = true
+            myLesson.trailingAnchor.constraint(equalTo: parentView.trailingAnchor, constant: -spacing).isActive = true}
         for flashcard in flashcards! {
             var i=0
             let quiz = FlashcardView()
@@ -86,14 +106,37 @@ class MyContentViewController: UIViewController {
             
             quiz.widthAnchor.constraint(equalToConstant: 250).isActive = true
             quiz.heightAnchor.constraint(equalToConstant: 250).isActive = true
-            quiz.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70).isActive = true
-            quiz.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70).isActive = true
+            if let parentView = view {
+                let parentWidth = parentView.bounds.width
+                let spacing = (parentWidth - 250) / 2
+                
+                quiz.leadingAnchor.constraint(equalTo: parentView.leadingAnchor, constant: spacing).isActive = true
+                quiz.trailingAnchor.constraint(equalTo: parentView.trailingAnchor, constant: -spacing).isActive = true}
             i+=1
             
         }
        
         
     }
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+            scrollView.contentInset = contentInsets
+            scrollView.scrollIndicatorInsets = contentInsets
+            // Scroll to the last flashcard if needed
+                    let lastFlashCardIndex = stackView.arrangedSubviews.count - 1
+                    if lastFlashCardIndex >= 0 {
+                        let lastFlashCard = stackView.arrangedSubviews[lastFlashCardIndex]
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        let contentInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+    }
+
     
     @objc func dismissKeyboard() {
         view.endEditing(true) // Dismiss the keyboard

@@ -78,7 +78,7 @@ override func collectionView(_ collectionView: UICollectionView, cellForItemAt i
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.item==4{
-            return CGSize(width: 375, height: 50)
+            return CGSize(width: 405, height: 50)
         }
         return  CGSize(width: 120, height: 120)
     }
